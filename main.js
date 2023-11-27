@@ -10,11 +10,10 @@ function calcularIMC(){
     var res = document.getElementById("res")
 
     if(isNaN(peso) || isNaN(altura) || isNaN(idade) || nome.length === 0) {
-           //alert('ERRO.. Faltam dados!')
-          res.innerHTML= "Impossível contar"
-       }
-
-    if(imc < 18.5){
+        //alert('ERRO.. Faltam dados!')
+       res.innerHTML= "Impossível calcular, faltam dados"
+    }
+    else if(imc < 18.5){
         res.innerHTML = "<p>Oi "+ nome+", " + " seu IMC é de: " + imc.toFixed(2) + "<br>"+ "Abaixo do Peso"
     } else if(imc < 24.9){
         res.innerHTML = "<p>Oi "+ nome+", " + " seu IMC é de: " + imc.toFixed(2) + "<br>"+ "Peso Normal"
